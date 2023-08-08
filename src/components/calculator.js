@@ -1,13 +1,14 @@
 import React from 'react';
 import './calculator.css';
+import CalculatorButton from './calculatorButton';
 
 export default function Calculator() {
   const buttonData = [
-    'AC', '+/-', '%', '/',
-    '7', '8', '9', '*',
-    '4', '5', '6', '-',
-    '1', '2', '3', '+',
-    '0', '.', '=',
+    ['AC', false], ['+/-', false], ['%', false], ['/'],
+    ['7'], ['8'], ['9'], ['*'],
+    ['4'], ['5'], ['6'], ['-'],
+    ['1'], ['2'], ['3'], ['+'],
+    ['0', true], ['.', false], ['=', false],
   ];
 
   return (
@@ -17,13 +18,11 @@ export default function Calculator() {
       </div>
       <div className="button-grid">
         {buttonData.map((button) => (
-          <button
-            key={button}
-            type="button"
-            className={`calc-button ${button === '0' ? 'double-width' : ''}`}
-          >
-            {button}
-          </button>
+          <CalculatorButton
+            key={button[0]}
+            label={button[0]}
+            isDoubleWidth={button[1]}
+          />
         ))}
       </div>
     </div>
