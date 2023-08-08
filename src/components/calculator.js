@@ -22,6 +22,7 @@ export default function Calculator() {
             key={button[0]}
             label={button[0]}
             isDoubleWidth={button[1]}
+            isLastInRow={button[0] === '/' || button[0] === '*' || button[0] === '-' || button[0] === '+' || button[0] === '='}
           />
         ))}
       </div>

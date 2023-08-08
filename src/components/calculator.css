@@ -6,10 +6,12 @@
 }
 
 .output-screen {
-  width: 100%;
+  display: flex;
+  justify-content: flex-end;
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
+  background: #ccc;
 }
 
 .button-grid {
@@ -29,4 +31,9 @@
 
 .double-width {
   grid-column: span 2;
+}
+
+.operation-button {
+  background-color: #f1a33c;
+  color: #fff;
 }
