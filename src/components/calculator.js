@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './calculator.css';
+import calculate from '../logic/calculate';
 import CalculatorButton from './calculatorButton';
 
 export default function Calculator() {
@@ -11,10 +12,29 @@ export default function Calculator() {
     ['0', true], ['.', false], ['=', false],
   ];
 
+  const [calculatorData, setCalculatorData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  // Click event handler for calculator buttons
+  const handleButtonClick = (buttonName) => {
+    let newData = calculate(calculatorData, buttonName);
+    if (buttonName === '=') {
+      newData = { ...newData, operation: null };
+    }
+    setCalculatorData(newData);
+  };
+
   return (
     <div className="calculator">
       <div className="output-screen">
-        0
+        <div className="operation">
+          {calculatorData.total}
+          {calculatorData.operation}
+          {calculatorData.next}
+        </div>
       </div>
       <div className="button-grid">
         {buttonData.map((button) => (
@@ -23,6 +43,7 @@ export default function Calculator() {
             label={button[0]}
             isDoubleWidth={button[1]}
             isLastInRow={button[0] === '/' || button[0] === '*' || button[0] === '-' || button[0] === '+' || button[0] === '='}
+            onClick={() => handleButtonClick(button[0])}
           />
         ))}
       </div>
