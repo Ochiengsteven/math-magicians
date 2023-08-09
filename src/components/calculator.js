@@ -28,7 +28,16 @@ export default function Calculator() {
   return (
     <div className="calculator">
       <div className="output-screen">
-        {calculatorData.next || calculatorData.total || '0'}
+        <div className="operation">
+          {calculatorData.total}
+          {calculatorData.operation}
+          {calculatorData.next}
+        </div>
+        <div className="result">
+          {calculatorData.operation === '='
+            ? calculatorData.total || '0'
+            : '0'}
+        </div>
       </div>
       <div className="button-grid">
         {buttonData.map((button) => (

@@ -8,11 +8,21 @@
 
 .output-screen {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   justify-content: flex-end;
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   background: #ccc;
+}
+
+.operation {
+  align-self: flex-start;
+}
+
+.result {
+  align-self: flex-end;
 }
 
 .button-grid {
