@@ -1,12 +1,13 @@
 .calculator {
   margin: 40px auto;
-  width: 300px; /* You can adjust the width as needed */
+  width: 400px; /* You can adjust the width as needed */
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .output-screen {
+  height: 39px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,10 +19,6 @@
 }
 
 .operation {
-  align-self: flex-start;
-}
-
-.result {
   align-self: flex-end;
 }
 

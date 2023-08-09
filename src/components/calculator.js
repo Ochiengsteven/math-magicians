@@ -20,7 +20,10 @@ export default function Calculator() {
 
   // Click event handler for calculator buttons
   const handleButtonClick = (buttonName) => {
-    const newData = calculate(calculatorData, buttonName);
+    let newData = calculate(calculatorData, buttonName);
+    if (buttonName === '=') {
+      newData = { ...newData, operation: null };
+    }
     setCalculatorData(newData);
   };
 
@@ -31,11 +34,6 @@ export default function Calculator() {
           {calculatorData.total}
           {calculatorData.operation}
           {calculatorData.next}
-        </div>
-        <div className="result">
-          {calculatorData.operation === '='
-            ? calculatorData.total || '0'
-            : '0'}
         </div>
       </div>
       <div className="button-grid">
