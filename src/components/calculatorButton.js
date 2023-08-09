@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import './calculator.css';
 
 // Child component for rendering individual buttons
-const CalculatorButton = ({ label, isDoubleWidth, isLastInRow }) => (
+const CalculatorButton = ({ label, isDoubleWidth, isLastInRow, onClick }) => (
   <button
     type="button"
     className={`calc-button ${isDoubleWidth ? 'double-width' : ''} ${isLastInRow ? 'operation-button' : ''}`}
+    onClick={onClick}
   >
     {label}
   </button>
