@@ -20,7 +20,6 @@ export default function Calculator() {
 
   // Click event handler for calculator buttons
   const handleButtonClick = (buttonName) => {
-    console.log('Button clicked!');
     const newData = calculate(calculatorData, buttonName);
     setCalculatorData(newData);
   };
