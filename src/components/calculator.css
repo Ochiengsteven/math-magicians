@@ -1,0 +1,39 @@
+.calculator {
+  width: 300px; /* You can adjust the width as needed */
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.output-screen {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #ccc;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calc-button {
+  width: 100%;
+  height: 50px; /* You can adjust the height as needed */
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.double-width {
+  grid-column: span 2;
+}
+
+.operation-button {
+  background-color: #f5913e;
+  color: #fff;
+}
