@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-// import './QuoteDisplay.css';
+import './QuoteDisplay.css'; // Import your CSS file for styling
 
 const QuoteDisplay = () => {
   const [quote, setQuote] = useState(null);
+  const [author, setAuthor] = useState(null); // Define author state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const category = 'computers';
@@ -14,7 +15,9 @@ const QuoteDisplay = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setQuote(data[0]?.quote);
+        const firstQuote = data[0];
+        setQuote(firstQuote?.quote);
+        setAuthor(firstQuote?.author); // Set the author from API response
         setIsLoading(false);
       })
       .catch((error) => {
@@ -31,6 +34,7 @@ const QuoteDisplay = () => {
     return (
       <div className="quote-display error">
         Error:
+        {' '}
         {error.message}
       </div>
     );
@@ -38,11 +42,14 @@ const QuoteDisplay = () => {
 
   return (
     <div className="quote-display">
-      <h2 className="quote-title">Quote of the Day</h2>
       <p className="quote-text">
         &quot;
         {quote}
         &quot;
+      </p>
+      <p className="author-text">
+        -
+        {author}
       </p>
     </div>
   );
