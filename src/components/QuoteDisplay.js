@@ -6,7 +6,7 @@ const QuoteDisplay = () => {
   const [author, setAuthor] = useState(null); // Define author state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const category = 'computers';
+  const category = 'men';
   const apiKey = 'dZB1jc2cSzXdURZ2PHCOdA==2ejjLjTFQHM1u8lb';
 
   useEffect(() => {
