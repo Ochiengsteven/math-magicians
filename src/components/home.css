@@ -1,0 +1,13 @@
+.content {
+  margin: 3rem;
+}
+
+.content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}

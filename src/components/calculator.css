@@ -1,6 +1,13 @@
+.calculator-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
 .calculator {
-  margin: 40px auto;
-  width: 400px; /* You can adjust the width as needed */
+  /* margin: 40px auto; */
+  width: 400px;
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
