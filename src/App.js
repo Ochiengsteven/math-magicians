@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link, Route, Routes } from 'react-router-dom';
 import './app.css';
 import Home from './components/Home';
