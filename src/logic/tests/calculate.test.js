@@ -31,4 +31,21 @@ describe('calculate function', () => {
       operation: '=',
     });
   });
+
+  it('handles +/- button press', () => {
+    const initialState = {
+      total: '15',
+      next: '5',
+      operation: null,
+    };
+
+    const operation = '+/-';
+    const newState = calculate(initialState, operation);
+
+    expect(newState).toEqual({
+      total: '15', // <-- Corrected expectation
+      next: '-5',
+      operation: null,
+    });
+  });
 });
