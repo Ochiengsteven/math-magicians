@@ -21,7 +21,7 @@ describe('operate function', () => {
     expect(operate(6, 0, '/')).toBe("Can't divide by 0.");
   });
 
-  it('calculates modulo', () => {
+  it('calculates modulus', () => {
     expect(operate(7, 3, '%')).toBe('1');
   });
 
