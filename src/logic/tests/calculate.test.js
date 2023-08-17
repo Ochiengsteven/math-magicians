@@ -10,11 +10,7 @@ describe('calculate function', () => {
     };
     const newState = calculate(initialState, 'AC');
 
-    expect(newState).toEqual({
-      total: null,
-      next: null,
-      operation: null,
-    });
+    expect(newState).toMatchSnapshot();
   });
 
   it('calculates the result on = button press', () => {
@@ -25,10 +21,19 @@ describe('calculate function', () => {
     };
     const newState = calculate(initialState, '=');
 
-    expect(newState).toEqual({
-      total: operate('10', '5', '+'),
-      next: null,
-      operation: '=',
-    });
+    expect(newState).toMatchSnapshot();
+  });
+
+  it('handles +/- button press', () => {
+    const initialState = {
+      total: '15',
+      next: '5',
+      operation: null,
+    };
+
+    const operation = '+/-';
+    const newState = calculate(initialState, operation);
+
+    expect(newState).toMatchSnapshot();
   });
 });

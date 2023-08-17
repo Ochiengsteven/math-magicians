@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalculatorButton should render as last button in row 1`] = `
+<button
+  class="calc-button  operation-button"
+  type="button"
+>
+  +
+</button>
+`;
+
+exports[`CalculatorButton should render correctly 1`] = `
+<button
+  class="calc-button  "
+  type="button"
+>
+  1
+</button>
+`;
+
+exports[`CalculatorButton should render with double width 1`] = `
+<button
+  class="calc-button double-width "
+  type="button"
+>
+  0
+</button>
+`;

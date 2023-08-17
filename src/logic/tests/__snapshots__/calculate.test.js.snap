@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculate function calculates the result on = button press 1`] = `
+Object {
+  "next": null,
+  "operation": "=",
+  "total": "15",
+}
+`;
+
+exports[`calculate function handles +/- button press 1`] = `
+Object {
+  "next": "-5",
+  "operation": null,
+  "total": "15",
+}
+`;
+
+exports[`calculate function resets state on AC button press 1`] = `
+Object {
+  "next": null,
+  "operation": null,
+  "total": null,
+}
+`;

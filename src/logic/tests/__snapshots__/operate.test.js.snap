@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`operate function adds two numbers 1`] = `"5"`;
+
+exports[`operate function calculates modulus 1`] = `"1"`;
+
+exports[`operate function divides two numbers 1`] = `"3"`;
+
+exports[`operate function handles division by zero 1`] = `"Can't divide by 0."`;
+
+exports[`operate function handles modulo by zero 1`] = `"Can't find modulo as can't divide by 0."`;
+
+exports[`operate function multiplies two numbers 1`] = `"6"`;
+
+exports[`operate function subtracts two numbers 1`] = `"2"`;
+
+exports[`operate function throws error for unknown operation 1`] = `"Unknown operation '^'"`;
