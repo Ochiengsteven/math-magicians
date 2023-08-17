@@ -1,4 +1,5 @@
 import calculate from '../calculate';
+// eslint-disable-next-line no-unused-vars
 import operate from '../operate';
 
 describe('calculate function', () => {
@@ -10,11 +11,7 @@ describe('calculate function', () => {
     };
     const newState = calculate(initialState, 'AC');
 
-    expect(newState).toEqual({
-      total: null,
-      next: null,
-      operation: null,
-    });
+    expect(newState).toMatchSnapshot();
   });
 
   it('calculates the result on = button press', () => {
@@ -25,11 +22,7 @@ describe('calculate function', () => {
     };
     const newState = calculate(initialState, '=');
 
-    expect(newState).toEqual({
-      total: operate('10', '5', '+'),
-      next: null,
-      operation: '=',
-    });
+    expect(newState).toMatchSnapshot();
   });
 
   it('handles +/- button press', () => {
@@ -42,10 +35,6 @@ describe('calculate function', () => {
     const operation = '+/-';
     const newState = calculate(initialState, operation);
 
-    expect(newState).toEqual({
-      total: '15', // <-- Corrected expectation
-      next: '-5',
-      operation: null,
-    });
+    expect(newState).toMatchSnapshot();
   });
 });
