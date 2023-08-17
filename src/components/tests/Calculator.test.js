@@ -35,4 +35,18 @@ describe('Calculator component', () => {
     const screenContainer = queryByText('.operation');
     expect(screenContainer).toBeNull();
   });
+
+  it('should match the snapshot after interactions', () => {
+    const { asFragment, getByText } = render(<Calculator />);
+
+    // Simulate button clicks to perform interactions
+    userEvent.click(getByText('1'));
+    userEvent.click(getByText('+'));
+    userEvent.click(getByText('2'));
+    userEvent.click(getByText('='));
+    userEvent.click(getByText('AC'));
+
+    // Assert that the snapshot matches the updated component state
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
