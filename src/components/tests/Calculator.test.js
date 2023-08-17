@@ -23,4 +23,16 @@ describe('Calculator component', () => {
     const resultElement = queryAllByText('3', { selector: '.operation' });
     expect(resultElement).toHaveLength(1); // Ensure there's only one element with the text "3"
   });
+
+  it('should clear the screen after AC button is clicked', () => {
+    const { getByText, queryByText } = render(<Calculator />);
+
+    // Simulate button clicks to enter a number and then clear
+    userEvent.click(getByText('1'));
+    userEvent.click(getByText('AC'));
+
+    // Check if the screen container is cleared
+    const screenContainer = queryByText('.operation');
+    expect(screenContainer).toBeNull();
+  });
 });
