@@ -1,5 +1,4 @@
 import calculate from '../calculate';
-// eslint-disable-next-line no-unused-vars
 import operate from '../operate';
 
 describe('calculate function', () => {
